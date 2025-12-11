@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 2: Klassificering av materia - Lär dig skillnaden mellan grundämne, kemisk förening, homogen och heterogen blandning.">
+  
+  <title>Lektion 2: Klassificering av materia | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 2</span>
+        <h1 class="lesson-title">Klassificering av materia</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Kunna skilja mellan rena ämnen och blandningar</li>
+          <li>Förstå skillnaden mellan grundämne och kemisk förening</li>
+          <li>Kunna klassificera blandningar som homogena eller heterogena</li>
+          <li>Ge exempel på varje kategori</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Översikt -->
+      <section class="section">
+        <h2 class="section-title">Materiens uppbyggnad</h2>
+        
+        <p>
+          All materia kan delas in i två huvudkategorier: <strong>rena ämnen</strong> och 
+          <strong>blandningar</strong>. Ett rent ämne har en bestämd sammansättning, medan 
+          en blandning består av två eller flera ämnen som inte är kemiskt bundna.
+        </p>
+
+        <div class="info-box">
+          <div class="info-box-title">🔬 Översikt</div>
+          <p>
+            <strong>Materia</strong><br>
+            ├── <strong>Rena ämnen</strong><br>
+            │   ├── Grundämnen<br>
+            │   └── Kemiska föreningar<br>
+            └── <strong>Blandningar</strong><br>
+                ├── Homogena blandningar<br>
+                └── Heterogena blandningar
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Grundämnen -->
+      <section class="section">
+        <h2 class="section-title">Grundämnen</h2>
+        
+        <p>
+          Ett <strong>grundämne</strong> är ett rent ämne som bara består av en typ av atom. 
+          Det finns cirka 118 kända grundämnen som alla finns i det periodiska systemet.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Egenskap</th>
+                <th>Beskrivning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Definition</td>
+                <td>Består av endast en typ av atom</td>
+              </tr>
+              <tr>
+                <td>Kan det brytas ned?</td>
+                <td>Kan inte brytas ned till enklare ämnen med kemiska metoder</td>
+              </tr>
+              <tr>
+                <td>Var hittar man dem?</td>
+                <td>I periodiska systemet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel på grundämnen</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Enskilda atomer:</strong> Helium (He), Neon (Ne), Guld (Au), Järn (Fe)<br><br>
+              <strong>Molekylära grundämnen:</strong> Kvävgas (N₂), Syrgas (O₂), Väte (H₂), Ozon (O₃)<br><br>
+              <em>Obs! N₂ och O₂ är fortfarande grundämnen även om de är molekyler – de består bara av en typ av atom.</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Kemiska föreningar -->
+      <section class="section">
+        <h2 class="section-title">Kemiska föreningar</h2>
+        
+        <p>
+          En <strong>kemisk förening</strong> är ett rent ämne som består av två eller flera 
+          olika typer av atomer som är kemiskt bundna till varandra i ett bestämt förhållande.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Egenskap</th>
+                <th>Beskrivning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Definition</td>
+                <td>Två eller flera olika grundämnen kemiskt bundna</td>
+              </tr>
+              <tr>
+                <td>Sammansättning</td>
+                <td>Alltid samma förhållande mellan atomerna</td>
+              </tr>
+              <tr>
+                <td>Kan det separeras?</td>
+                <td>Kan brytas ned till grundämnen genom kemiska reaktioner</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel på kemiska föreningar</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Vatten (H₂O):</strong> 2 väteatomer + 1 syreatom<br>
+              <strong>Koldioxid (CO₂):</strong> 1 kolatom + 2 syreatomer<br>
+              <strong>Natriumklorid/salt (NaCl):</strong> 1 natriumatom + 1 kloratom<br>
+              <strong>Glukos (C₆H₁₂O₆):</strong> 6 kol + 12 väte + 6 syre
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Hur skiljer man dem åt?</div>
+          <p>
+            <strong>Grundämne:</strong> Endast en typ av bokstav i formeln (t.ex. O₂, Fe, N₂)<br>
+            <strong>Kemisk förening:</strong> Minst två olika typer av bokstäver (t.ex. H₂O, NaCl, CO₂)
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Blandningar -->
+      <section class="section">
+        <h2 class="section-title">Blandningar</h2>
+        
+        <p>
+          En <strong>blandning</strong> består av två eller flera ämnen som är fysiskt 
+          blandade men inte kemiskt bundna. Ämnena behåller sina egna egenskaper och 
+          kan separeras med fysikaliska metoder.
+        </p>
+
+        <h3 style="color: var(--md-secondary); margin-top: 2rem;">Homogena blandningar</h3>
+        <p>
+          En <strong>homogen blandning</strong> ser likadan ut överallt. Man kan inte 
+          urskilja de olika beståndsdelarna, inte ens med mikroskop. Kallas även <em>lösningar</em>.
+        </p>
+
+        <div class="example">
+          <div class="example-header">Exempel på homogena blandningar</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Luft:</strong> Blandning av kväve, syre, argon m.m.<br>
+              <strong>Saltvatten:</strong> Salt löst i vatten<br>
+              <strong>Mässing:</strong> Legering av koppar och zink<br>
+              <strong>Vinäger:</strong> Ättiksyra löst i vatten<br>
+              <strong>Sockervatten:</strong> Socker löst i vatten
+            </div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--md-tertiary); margin-top: 2rem;">Heterogena blandningar</h3>
+        <p>
+          En <strong>heterogen blandning</strong> är ojämnt fördelad. Man kan tydligt 
+          se eller urskilja de olika beståndsdelarna.
+        </p>
+
+        <div class="example">
+          <div class="example-header">Exempel på heterogena blandningar</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Granit:</strong> Man ser olika mineralkorn<br>
+              <strong>Sallad:</strong> Man ser alla ingredienser separat<br>
+              <strong>Sand och vatten:</strong> Sanden sjunker till botten<br>
+              <strong>Olja och vatten:</strong> Separerar i lager<br>
+              <strong>Müsli:</strong> Man kan se flingorna, nötterna och frukten
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Sammanfattning -->
+      <section class="section">
+        <h2 class="section-title">Sammanfattande tabell</h2>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Kategori</th>
+                <th>Definition</th>
+                <th>Kännetecken</th>
+                <th>Exempel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Grundämne</strong></td>
+                <td>En typ av atom</td>
+                <td>Finns i periodiska systemet</td>
+                <td>Au, O₂, N₂, Fe</td>
+              </tr>
+              <tr>
+                <td><strong>Kemisk förening</strong></td>
+                <td>Olika atomer kemiskt bundna</td>
+                <td>Fast förhållande, kemisk formel</td>
+                <td>H₂O, NaCl, CO₂</td>
+              </tr>
+              <tr>
+                <td><strong>Homogen blandning</strong></td>
+                <td>Jämnt fördelad blandning</td>
+                <td>Ser likadan ut överallt</td>
+                <td>Luft, saltvatten, mässing</td>
+              </tr>
+              <tr>
+                <td><strong>Heterogen blandning</strong></td>
+                <td>Ojämnt fördelad blandning</td>
+                <td>Man ser olika delar</td>
+                <td>Granit, sallad, müsli</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Snabbguide för klassificering</div>
+          <p>
+            1. <strong>Är det ett rent ämne eller en blandning?</strong><br>
+            2. Om rent ämne: en atomtyp → grundämne, flera atomtyper → förening<br>
+            3. Om blandning: ser likadan ut → homogen, ser olika ut → heterogen
+          </p>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Klassificera järn (Fe) – grundämne, förening eller blandning?</li>
+            <li>Klassificera vatten (H₂O) – grundämne, förening eller blandning?</li>
+            <li>Är luft en homogen eller heterogen blandning?</li>
+            <li>Klassificera kvävgas (N₂) – grundämne eller förening?</li>
+            <li>Ge ett exempel på en heterogen blandning.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Klassificera följande: a) Granit b) Koldioxid c) Guld d) Saltvatten</li>
+            <li>Förklara varför O₂ är ett grundämne men CO₂ är en förening.</li>
+            <li>Är bronze (brons) en förening eller en blandning? Motivera.</li>
+            <li>Hur kan man skilja mellan en homogen och heterogen blandning?</li>
+            <li>Klassificera: a) Vinäger b) Olja och vatten c) Mässing d) Socker</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>En elev påstår att natriumklorid (NaCl) är en blandning eftersom det innehåller två olika ämnen. Är eleven korrekt? Motivera.</li>
+            <li>Förklara skillnaden mellan en legering och en kemisk förening.</li>
+            <li>Diamant och grafit är båda gjorda av kol. Är de samma grundämne? Förklara.</li>
+            <li>Mjölk verkar vara en homogen vätska. Är det verkligen en homogen blandning? Diskutera.</li>
+            <li>Klassificera och motivera: svavelsyra (H₂SO₄), stål, rent järn (Fe), havssand.</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>Grundämne</strong></li>
+              <li><strong>Kemisk förening</strong></li>
+              <li><strong>Homogen blandning</strong></li>
+              <li><strong>Grundämne</strong> (bara en sorts atom, kväve)</li>
+              <li>T.ex. <strong>granit, müsli, sallad, sand och vatten</strong></li>
+              <li>a) <strong>Heterogen blandning</strong> b) <strong>Kemisk förening</strong> c) <strong>Grundämne</strong> d) <strong>Homogen blandning</strong></li>
+              <li>O₂ består bara av syreatomer (en atomtyp). CO₂ innehåller både kol och syre (två olika atomtyper) som är kemiskt bundna.</li>
+              <li><strong>Blandning</strong> (legering) – metallerna är fysiskt blandade men inte kemiskt bundna i ett fast förhållande.</li>
+              <li>Homogen: ser likadan ut överallt, t.ex. saltvatten. Heterogen: man kan se olika delar, t.ex. olja och vatten.</li>
+              <li>a) <strong>Homogen blandning</strong> b) <strong>Heterogen blandning</strong> c) <strong>Homogen blandning</strong> d) <strong>Kemisk förening</strong></li>
+              <li>Nej, eleven har fel. NaCl är en <strong>kemisk förening</strong> – natrium och klor är kemiskt bundna i ett bestämt förhållande (1:1), inte bara blandade.</li>
+              <li>En legering är en fysisk blandning av metaller som kan ha varierande sammansättning. En kemisk förening har alltid samma förhållande mellan atomerna.</li>
+              <li>Ja, de är <strong>samma grundämne</strong> (kol). De är olika allotroper – samma atomer arrangerade på olika sätt.</li>
+              <li>Mjölk är faktiskt en <strong>heterogen blandning</strong> (kolloid/emulsion) – fettdroppar är fördelade i vattnet. Under mikroskop kan man se skillnader.</li>
+              <li>H₂SO₄: <strong>Kemisk förening</strong>. Stål: <strong>Homogen blandning</strong> (legering). Fe: <strong>Grundämne</strong>. Havssand: <strong>Heterogen blandning</strong>.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="01-atomens-uppbyggnad.html" class="nav-btn">← Föregående</a>
+        <a href="03-oxidationstal.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

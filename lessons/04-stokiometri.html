@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 4: Stökiometri - Lär dig mol-begreppet, molmassa, Avogadros tal och hur man beräknar substansmängd.">
+  
+  <title>Lektion 4: Stökiometri | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 4</span>
+        <h1 class="lesson-title">Stökiometri</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå mol-begreppet och Avogadros tal</li>
+          <li>Kunna beräkna molmassa för olika ämnen</li>
+          <li>Använda formeln n = m/M</li>
+          <li>Tillämpa molförhållanden i kemiska reaktioner</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Mol-begreppet -->
+      <section class="section">
+        <h2 class="section-title">Mol-begreppet</h2>
+        
+        <p>
+          En <strong>mol</strong> är en SI-enhet för substansmängd. Precis som ett dussin 
+          betyder 12 stycken, betyder en mol ett visst antal partiklar.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula">1 mol = 6,022 × 10²³ partiklar</div>
+          <div class="formula-description">Avogadros tal (Nₐ)</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Avogadros tal</div>
+          <p>
+            Avogadros tal, $N_A = 6,022 \times 10^{23}$ mol⁻¹, anger hur många partiklar 
+            (atomer, molekyler, joner) det finns i exakt en mol av ett ämne.
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Varför mol?</div>
+          <div class="example-content">
+            <div class="example-solution">
+              Atomer är så små att vi inte kan räkna dem individellt. Istället använder vi 
+              mol som en praktisk "räkneenhet". Om du har 1 mol vatten (H₂O), har du:<br><br>
+              • 6,022 × 10²³ vattenmolekyler<br>
+              • 2 × 6,022 × 10²³ väteatomer (2 per molekyl)<br>
+              • 6,022 × 10²³ syreatomer (1 per molekyl)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Molmassa -->
+      <section class="section">
+        <h2 class="section-title">Molmassa</h2>
+        
+        <p>
+          <strong>Molmassan (M)</strong> är massan av en mol av ett ämne, uttryckt i gram per mol (g/mol).
+          För grundämnen hittar du molmassan direkt i periodiska systemet.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula">M = massa per mol (g/mol)</div>
+          <div class="formula-description">Molmassan för en förening = summan av atommassor × antal av varje atom</div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel: Beräkna molmassan för H₂O</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Hitta atommassorna i periodiska systemet<br>
+              • H = 1,008 g/mol ≈ 1 g/mol<br>
+              • O = 16,00 g/mol<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna totala molmassan<br>
+              • M(H₂O) = 2 × M(H) + 1 × M(O)<br>
+              • M(H₂O) = 2 × 1 + 16 = <strong>18 g/mol</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel: Beräkna molmassan för Ca(OH)₂</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Räkna antalet atomer<br>
+              • Ca: 1 st<br>
+              • O: 2 st (parentesen gånger 2)<br>
+              • H: 2 st (parentesen gånger 2)<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna<br>
+              • M = 1×40 + 2×16 + 2×1 = 40 + 32 + 2 = <strong>74 g/mol</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Formler -->
+      <section class="section">
+        <h2 class="section-title">Viktiga formler</h2>
+        
+        <div class="formula-box">
+          <div class="formula">n = m / M</div>
+          <div class="formula-description">
+            n = substansmängd (mol)<br>
+            m = massa (g)<br>
+            M = molmassa (g/mol)
+          </div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">N = n × Nₐ</div>
+          <div class="formula-description">
+            N = antal partiklar<br>
+            n = substansmängd (mol)<br>
+            Nₐ = 6,022 × 10²³ mol⁻¹
+          </div>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Triangelmetoden</div>
+          <p>
+            Om du täcker det du söker i formeln n = m/M:<br>
+            • Söker n? → n = m/M<br>
+            • Söker m? → m = n × M<br>
+            • Söker M? → M = m/n
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel: Beräkna substansmängden</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur många mol är 36 g vatten (H₂O)?
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Beräkna molmassan<br>
+              • M(H₂O) = 2×1 + 16 = 18 g/mol<br><br>
+              
+              <strong>Steg 2:</strong> Använd formeln n = m/M<br>
+              • n = 36 g / 18 g/mol = <strong>2 mol</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Stökiometri i reaktioner -->
+      <section class="section">
+        <h2 class="section-title">Stökiometri i reaktioner</h2>
+        
+        <p>
+          I en balanserad reaktionsformel anger koefficienterna <strong>molförhållandena</strong> 
+          mellan reaktanter och produkter.
+        </p>
+
+        <div class="example">
+          <div class="example-header">Exempel: Molförhållanden</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Reaktion:</strong> 2 H₂ + O₂ → 2 H₂O
+            </div>
+            <div class="example-solution">
+              Koefficienterna visar:<br>
+              • 2 mol H₂ reagerar med 1 mol O₂<br>
+              • Det bildas 2 mol H₂O<br><br>
+              <strong>Molförhållandet H₂ : O₂ : H₂O = 2 : 1 : 2</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Beräkningsexempel</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur mycket zink (Zn) behövs för att bilda 15 g zinkoxid (ZnO)?<br>
+              <em>Reaktion: 2 Zn + O₂ → 2 ZnO</em>
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Beräkna molmassan för ZnO<br>
+              • M(ZnO) = 65,4 + 16 = 81,4 g/mol<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna substansmängden ZnO<br>
+              • n(ZnO) = 15 g / 81,4 g/mol = 0,184 mol<br><br>
+              
+              <strong>Steg 3:</strong> Använd molförhållandet<br>
+              • Enligt formeln: 2 Zn → 2 ZnO (1:1)<br>
+              • n(Zn) = n(ZnO) = 0,184 mol<br><br>
+              
+              <strong>Steg 4:</strong> Beräkna massan Zn<br>
+              • m(Zn) = n × M = 0,184 × 65,4 = <strong>12,0 g</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Vad är Avogadros tal och vad representerar det?</li>
+            <li>Beräkna molmassan för NaCl (Na = 23, Cl = 35,5).</li>
+            <li>Hur många mol är 46 g etanol (C₂H₅OH, M = 46 g/mol)?</li>
+            <li>Beräkna molmassan för CO₂ (C = 12, O = 16).</li>
+            <li>Vilken massa har 0,5 mol vatten (M = 18 g/mol)?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Beräkna molmassan för H₂SO₄ (H = 1, S = 32, O = 16).</li>
+            <li>Hur många mol är 22 g koldioxid (CO₂)?</li>
+            <li>Hur många gram väger 3 mol järn (Fe, M = 56 g/mol)?</li>
+            <li>Beräkna molmassan för kalciumkarbonat CaCO₃ (Ca = 40, C = 12, O = 16).</li>
+            <li>Hur många vattenmolekyler finns i 1,8 g vatten?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Vid förbränning: CH₄ + 2O₂ → CO₂ + 2H₂O. Hur många mol O₂ behövs för 3 mol CH₄?</li>
+            <li>Hur mycket CaCO₃ (M = 100 g/mol) behövs för att få 11 g CO₂? Reaktion: CaCO₃ → CaO + CO₂</li>
+            <li>I reaktionen 2H₂ + O₂ → 2H₂O, hur mycket vatten bildas av 8 g väte (H₂)?</li>
+            <li>Hur många kolatomer finns i 6 g kol (C)?</li>
+            <li>En reaktion ger 0,25 mol produkt. Om produkten är Fe₂O₃ (M = 160 g/mol), vilken massa erhålls?</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>$6,022 \times 10^{23}$ mol⁻¹ – antal partiklar i en mol</li>
+              <li><strong>58,5 g/mol</strong> (23 + 35,5)</li>
+              <li><strong>1 mol</strong> (46/46)</li>
+              <li><strong>44 g/mol</strong> (12 + 2×16)</li>
+              <li><strong>9 g</strong> (0,5 × 18)</li>
+              <li><strong>98 g/mol</strong> (2×1 + 32 + 4×16)</li>
+              <li><strong>0,5 mol</strong> (22/44)</li>
+              <li><strong>168 g</strong> (3 × 56)</li>
+              <li><strong>100 g/mol</strong> (40 + 12 + 3×16)</li>
+              <li>n = 1,8/18 = 0,1 mol → <strong>6,022 × 10²² molekyler</strong></li>
+              <li><strong>6 mol O₂</strong> (3 × 2)</li>
+              <li>n(CO₂) = 11/44 = 0,25 mol → n(CaCO₃) = 0,25 mol → <strong>25 g</strong></li>
+              <li>n(H₂) = 8/2 = 4 mol → n(H₂O) = 4 mol → <strong>72 g</strong></li>
+              <li>n = 6/12 = 0,5 mol → <strong>3,011 × 10²³ atomer</strong></li>
+              <li><strong>40 g</strong> (0,25 × 160)</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="03-oxidationstal.html" class="nav-btn">← Föregående</a>
+        <a href="05-koncentrationsberakningar.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 5: Koncentrationsberäkningar - Lär dig formlerna c = n/V och spädningsformeln c₁V₁ = c₂V₂.">
+  
+  <title>Lektion 5: Koncentrationsberäkningar | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧫</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 5</span>
+        <h1 class="lesson-title">Koncentrationsberäkningar</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå vad molaritet (koncentration) innebär</li>
+          <li>Använda formeln c = n/V för koncentrationsberäkningar</li>
+          <li>Använda spädningsformeln c₁V₁ = c₂V₂</li>
+          <li>Lösa praktiska problem med lösningar</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Molaritet -->
+      <section class="section">
+        <h2 class="section-title">Molaritet (Koncentration)</h2>
+        
+        <p>
+          <strong>Molaritet</strong> eller <strong>koncentration</strong> anger hur mycket 
+          löst ämne som finns i en viss volym lösning. Den mäts i mol per liter (mol/L eller M).
+        </p>
+
+        <div class="formula-box">
+          <div class="formula">c = n / V</div>
+          <div class="formula-description">
+            c = koncentration (mol/L eller M)<br>
+            n = substansmängd (mol)<br>
+            V = volym (L)
+          </div>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Enheter</div>
+          <p>
+            <strong>Viktigt:</strong> Volymen måste vara i liter (L)!<br>
+            • 1 L = 1000 mL = 1 dm³<br>
+            • 1 mL = 0,001 L = 1 cm³<br>
+            • Exempel: 250 mL = 0,250 L
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 1: Beräkna koncentration</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> 0,5 mol NaCl löses i 2 L vatten. Vad blir koncentrationen?
+            </div>
+            <div class="example-solution">
+              <strong>Formel:</strong> c = n / V<br>
+              c = 0,5 mol / 2 L = <strong>0,25 mol/L</strong> (eller 0,25 M)
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 2: Beräkna substansmängd</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur många mol HCl finns i 500 mL av en 0,1 M lösning?
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Konvertera volym till liter<br>
+              • 500 mL = 0,5 L<br><br>
+              
+              <strong>Steg 2:</strong> Lös ut n från c = n/V<br>
+              • n = c × V = 0,1 mol/L × 0,5 L = <strong>0,05 mol</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 3: Beräkna volym</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Vilken volym av en 2 M lösning innehåller 0,4 mol?
+            </div>
+            <div class="example-solution">
+              <strong>Lös ut V från c = n/V:</strong><br>
+              V = n / c = 0,4 mol / 2 mol/L = <strong>0,2 L</strong> (200 mL)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Spädning -->
+      <section class="section">
+        <h2 class="section-title">Spädningsformeln</h2>
+        
+        <p>
+          Vid spädning tillsätter du lösningsmedel (t.ex. vatten) till en lösning för att 
+          minska koncentrationen. Antalet mol löst ämne förblir konstant.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula">c₁ × V₁ = c₂ × V₂</div>
+          <div class="formula-description">
+            c₁ = ursprunglig koncentration<br>
+            V₁ = ursprunglig volym<br>
+            c₂ = ny koncentration<br>
+            V₂ = ny volym
+          </div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Varför fungerar detta?</div>
+          <p>
+            Eftersom n = c × V, och substansmängden inte ändras vid spädning:<br>
+            n₁ = n₂ → c₁ × V₁ = c₂ × V₂
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 4: Spädningsberäkning</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Du har 100 mL av en 1 M HCl-lösning. 
+              Du späder den till 500 mL. Vad blir den nya koncentrationen?
+            </div>
+            <div class="example-solution">
+              <strong>Givet:</strong><br>
+              • c₁ = 1 M, V₁ = 100 mL<br>
+              • V₂ = 500 mL, c₂ = ?<br><br>
+              
+              <strong>Använd spädningsformeln:</strong><br>
+              c₁ × V₁ = c₂ × V₂<br>
+              1 × 100 = c₂ × 500<br>
+              c₂ = 100 / 500 = <strong>0,2 M</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 5: Beräkna ursprunglig volym</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur mycket av en stamlösning på 6 M behövs för att 
+              tillverka 250 mL av en 0,5 M lösning?
+            </div>
+            <div class="example-solution">
+              <strong>Givet:</strong><br>
+              • c₁ = 6 M, V₁ = ?<br>
+              • c₂ = 0,5 M, V₂ = 250 mL<br><br>
+              
+              <strong>Använd spädningsformeln:</strong><br>
+              6 × V₁ = 0,5 × 250<br>
+              6V₁ = 125<br>
+              V₁ = 125 / 6 = <strong>20,8 mL</strong><br><br>
+              
+              <em>Tillsätt alltså 20,8 mL stamlösning och fyll på med vatten till 250 mL.</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Kombinerade beräkningar -->
+      <section class="section">
+        <h2 class="section-title">Kombinerade beräkningar</h2>
+        
+        <p>
+          Ibland behöver du kombinera koncentrationsformeln med molmassa (n = m/M) 
+          för att lösa problem.
+        </p>
+
+        <div class="example">
+          <div class="example-header">Exempel 6: Massa till koncentration</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> 5,85 g NaCl (M = 58,5 g/mol) löses i vatten till 500 mL lösning. 
+              Beräkna koncentrationen.
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Beräkna substansmängden<br>
+              • n = m/M = 5,85 / 58,5 = 0,1 mol<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna koncentrationen<br>
+              • c = n/V = 0,1 / 0,5 = <strong>0,2 mol/L</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 7: Koncentration till massa</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur mycket NaOH (M = 40 g/mol) behövs för att 
+              tillverka 2 L av en 0,25 M lösning?
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Beräkna substansmängden<br>
+              • n = c × V = 0,25 × 2 = 0,5 mol<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna massan<br>
+              • m = n × M = 0,5 × 40 = <strong>20 g</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>0,2 mol socker löses i 0,5 L vatten. Beräkna koncentrationen.</li>
+            <li>Hur många mol finns i 1 L av en 0,5 M lösning?</li>
+            <li>Omvandla 250 mL till liter.</li>
+            <li>En lösning har c = 2 M. Hur många mol finns i 0,1 L?</li>
+            <li>Vad är enheten för molaritet?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Beräkna koncentrationen om 4 mol NaCl löses i 2 L lösning.</li>
+            <li>Hur många mol HCl finns i 200 mL av en 0,5 M lösning?</li>
+            <li>100 mL av en 2 M lösning späds till 400 mL. Beräkna den nya koncentrationen.</li>
+            <li>Hur mycket av en 10 M stamlösning behövs för att göra 500 mL av en 1 M lösning?</li>
+            <li>11,7 g NaCl (M = 58,5 g/mol) löses i 250 mL lösning. Beräkna koncentrationen.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Hur mycket NaOH (M = 40 g/mol) behövs för 500 mL av en 0,2 M lösning?</li>
+            <li>25 mL av en 6 M H₂SO₄ späds till 150 mL. Beräkna c₂.</li>
+            <li>En lösning av glukos (C₆H₁₂O₆, M = 180 g/mol) har c = 0,5 M. Hur mycket glukos finns i 100 mL?</li>
+            <li>Du vill ha 2 L av en 0,1 M CuSO₄-lösning (M = 160 g/mol). Hur mycket CuSO₄ behöver du?</li>
+            <li>En stamlösning är 12 M. Du blandar 50 mL av den med 200 mL vatten. Beräkna slutkoncentrationen.</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>0,4 M</strong> (0,2/0,5)</li>
+              <li><strong>0,5 mol</strong></li>
+              <li><strong>0,25 L</strong></li>
+              <li><strong>0,2 mol</strong> (2 × 0,1)</li>
+              <li><strong>mol/L</strong> (eller M)</li>
+              <li><strong>2 M</strong> (4/2)</li>
+              <li><strong>0,1 mol</strong> (0,5 × 0,2)</li>
+              <li><strong>0,5 M</strong> (2 × 100 = c₂ × 400)</li>
+              <li><strong>50 mL</strong> (10 × V₁ = 1 × 500)</li>
+              <li>n = 11,7/58,5 = 0,2 mol → c = 0,2/0,25 = <strong>0,8 M</strong></li>
+              <li>n = 0,2 × 0,5 = 0,1 mol → m = 0,1 × 40 = <strong>4 g</strong></li>
+              <li>6 × 25 = c₂ × 150 → c₂ = <strong>1 M</strong></li>
+              <li>n = 0,5 × 0,1 = 0,05 mol → m = 0,05 × 180 = <strong>9 g</strong></li>
+              <li>n = 0,1 × 2 = 0,2 mol → m = 0,2 × 160 = <strong>32 g</strong></li>
+              <li>V₂ = 50 + 200 = 250 mL → 12 × 50 = c₂ × 250 → c₂ = <strong>2,4 M</strong></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="04-stokiometri.html" class="nav-btn">← Föregående</a>
+        <a href="06-elektrokemiska-spanningsserien.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

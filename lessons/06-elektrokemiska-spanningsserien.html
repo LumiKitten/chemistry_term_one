@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 6: Elektrokemiska spänningsserien - Lär dig om redoxreaktioner och hur man förutsäger vilka metaller som reagerar.">
+  
+  <title>Lektion 6: Elektrokemiska spänningsserien | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔋</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 6</span>
+        <h1 class="lesson-title">Elektrokemiska spänningsserien</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå elektrokemiska spänningsserien</li>
+          <li>Kunna förutsäga om en redoxreaktion sker</li>
+          <li>Skilja på ädla och oädla metaller</li>
+          <li>Använda spänningsserien för att lösa praktiska problem</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Introduktion -->
+      <section class="section">
+        <h2 class="section-title">Vad är spänningsserien?</h2>
+        
+        <p>
+          Den <strong>elektrokemiska spänningsserien</strong> rangordnar metaller (och vätgas) 
+          efter hur lätt de avger elektroner. Metaller högre upp i serien avger elektroner 
+          lättare och kallas <em>oädla</em>, medan metaller längre ner kallas <em>ädla</em>.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Metall</th>
+                <th>Jon</th>
+                <th>Typ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kalium (K)</td>
+                <td>K⁺</td>
+                <td rowspan="6" style="background: var(--md-secondary-container); color: var(--md-secondary); text-align: center; font-weight: bold;">↑<br>Mer oädel<br>(avger e⁻ lättare)</td>
+              </tr>
+              <tr>
+                <td>Natrium (Na)</td>
+                <td>Na⁺</td>
+              </tr>
+              <tr>
+                <td>Magnesium (Mg)</td>
+                <td>Mg²⁺</td>
+              </tr>
+              <tr>
+                <td>Aluminium (Al)</td>
+                <td>Al³⁺</td>
+              </tr>
+              <tr>
+                <td>Zink (Zn)</td>
+                <td>Zn²⁺</td>
+              </tr>
+              <tr>
+                <td>Järn (Fe)</td>
+                <td>Fe²⁺</td>
+              </tr>
+              <tr>
+                <td>Nickel (Ni)</td>
+                <td>Ni²⁺</td>
+                <td rowspan="2" style="text-align: center;"><em>Mitten</em></td>
+              </tr>
+              <tr>
+                <td>Tenn (Sn)</td>
+                <td>Sn²⁺</td>
+              </tr>
+              <tr style="background: var(--md-tertiary-container);">
+                <td><strong>Väte (H₂)</strong></td>
+                <td><strong>H⁺</strong></td>
+                <td style="text-align: center;"><strong>Referens</strong></td>
+              </tr>
+              <tr>
+                <td>Koppar (Cu)</td>
+                <td>Cu²⁺</td>
+                <td rowspan="4" style="background: var(--md-primary-container); color: var(--md-primary); text-align: center; font-weight: bold;">↓<br>Mer ädel<br>(avger e⁻ svårare)</td>
+              </tr>
+              <tr>
+                <td>Silver (Ag)</td>
+                <td>Ag⁺</td>
+              </tr>
+              <tr>
+                <td>Platina (Pt)</td>
+                <td>Pt²⁺</td>
+              </tr>
+              <tr>
+                <td>Guld (Au)</td>
+                <td>Au³⁺</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Minnesregel</div>
+          <p>
+            <strong>"Kallar du Nån Musiker Al, Så är Ju Nicke Snäll mot Hästar Köper han Silversaker Pålagt med Guld"</strong><br>
+            K, Na, Mg, Al, Zn, Fe, Ni, Sn, H, Cu, Ag, Pt, Au
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Huvudregeln -->
+      <section class="section">
+        <h2 class="section-title">Huvudregeln</h2>
+        
+        <div class="formula-box">
+          <div class="formula">En oädel metall kan reducera joner av en ädlare metall</div>
+          <div class="formula-description">Den oädla metallen oxideras, den ädla metalljonen reduceras</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Praktiskt uttryckt</div>
+          <p>
+            Om du lägger en metall i en lösning av metalljonar:<br>
+            • <strong>Reaktion sker</strong> om metallen står ÖVER jonen i serien<br>
+            • <strong>Ingen reaktion</strong> om metallen står UNDER jonen i serien
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 1: Sker en reaktion?</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> En zinkstav sänks i en kopparsulfatlösning (Cu²⁺). Sker en reaktion?
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Identifiera metallen och jonen<br>
+              • Metall: Zn (zink)<br>
+              • Jon: Cu²⁺ (kopparjoner)<br><br>
+              
+              <strong>Steg 2:</strong> Jämför i spänningsserien<br>
+              • Zn står ÖVER Cu<br>
+              • Zn är mer oädel än Cu<br><br>
+              
+              <strong>Svar:</strong> JA, en reaktion sker!<br>
+              Zn + Cu²⁺ → Zn²⁺ + Cu
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 2: Sker en reaktion?</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> En kopparstav sänks i en zinksulfatlösning (Zn²⁺). Sker en reaktion?
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Identifiera metallen och jonen<br>
+              • Metall: Cu (koppar)<br>
+              • Jon: Zn²⁺ (zinkjoner)<br><br>
+              
+              <strong>Steg 2:</strong> Jämför i spänningsserien<br>
+              • Cu står UNDER Zn<br>
+              • Cu är mer ädel än Zn<br><br>
+              
+              <strong>Svar:</strong> NEJ, ingen reaktion sker!<br>
+              <em>Koppar kan inte reducera zinkjoner.</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Reaktioner med syror -->
+      <section class="section">
+        <h2 class="section-title">Reaktioner med syror</h2>
+        
+        <p>
+          Vätgas (H₂) finns i mitten av spänningsserien. Metaller som står ovanför väte 
+          kan reagera med syror och frisätta vätgas.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula">Oädel metall + Syra → Salt + H₂↑</div>
+          <div class="formula-description">Gäller för metaller ovanför H i spänningsserien</div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 3: Metall i syra</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Reagerar zink med saltsyra (HCl)?
+            </div>
+            <div class="example-solution">
+              • Zn står OVANFÖR H i spänningsserien<br>
+              • JA, reaktion sker!<br><br>
+              <strong>Reaktion:</strong> Zn + 2HCl → ZnCl₂ + H₂↑
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 4: Metall i syra</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Reagerar koppar med saltsyra (HCl)?
+            </div>
+            <div class="example-solution">
+              • Cu står UNDER H i spänningsserien<br>
+              • NEJ, ingen reaktion!<br><br>
+              <em>Koppar är för ädel för att reagera med vanliga syror.</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Vilken metall är mer oädel: järn eller koppar?</li>
+            <li>Vilken metall är mest ädel: guld, silver eller koppar?</li>
+            <li>Kan aluminium reducera kopparjoner (Cu²⁺)?</li>
+            <li>Rangordna efter ädelhet: Zn, Au, Fe (minst ädel först)</li>
+            <li>Vad betyder det att en metall är "oädel"?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En järnstav sänks i kopparsulfatlösning (Cu²⁺). Sker reaktion? Motivera.</li>
+            <li>En silverstav sänks i zinksulfatlösning (Zn²⁺). Sker reaktion? Motivera.</li>
+            <li>Kan magnesium reagera med saltsyra och frisätta vätgas?</li>
+            <li>Vilka av följande metaller reagerar INTE med saltsyra: Zn, Cu, Fe, Au?</li>
+            <li>Skriv reaktionsformeln om zink sänks i silversulfatlösning (Ag⁺).</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Bägare A: Blystav i kopparkloridlösning. Bägare B: Blystav i aluminiumkloridlösning. I vilken bägare sker reaktion?</li>
+            <li>Förklara varför guldsmycken inte rostar men järnspikar gör det.</li>
+            <li>Du har en okänd metall. Den reagerar med Cu²⁺ men inte med Zn²⁺. Mellan vilka metaller i serien ligger den?</li>
+            <li>Skriv jonformeln för reaktionen: Mg + CuSO₄ →</li>
+            <li>Varför används zink för att skydda järn mot rost (galvanisering)?</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>Järn</strong> (står högre upp i serien)</li>
+              <li><strong>Guld</strong> (står längst ner)</li>
+              <li><strong>Ja</strong> (Al står ovanför Cu)</li>
+              <li><strong>Zn, Fe, Au</strong></li>
+              <li>En oädel metall avger elektroner lätt och <strong>oxideras lätt</strong></li>
+              <li><strong>Ja</strong> – Fe står ovanför Cu. Fe + Cu²⁺ → Fe²⁺ + Cu</li>
+              <li><strong>Nej</strong> – Ag står under Zn. Ag är för ädel.</li>
+              <li><strong>Ja</strong> – Mg står ovanför H. Mg + 2HCl → MgCl₂ + H₂</li>
+              <li><strong>Cu och Au</strong> (de står under väte)</li>
+              <li><strong>Zn + 2Ag⁺ → Zn²⁺ + 2Ag</strong></li>
+              <li><strong>Bägare A</strong> – Pb står ovanför Cu men under Al</li>
+              <li>Guld är <strong>ädelt</strong> och oxideras inte lätt. Järn är oädelt och reagerar med syre och vatten.</li>
+              <li>Mellan <strong>koppar (Cu) och zink (Zn)</strong></li>
+              <li><strong>Mg + Cu²⁺ → Mg²⁺ + Cu</strong></li>
+              <li>Zink är <strong>mer oädel</strong> och oxideras istället för järnet. Zinken "offrar sig" för att skydda järnet.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="05-koncentrationsberakningar.html" class="nav-btn">← Föregående</a>
+        <a href="07-ph-berakningar.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

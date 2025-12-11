@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 1: Atomens uppbyggnad - Lär dig om protoner, neutroner, elektroner, masstal, atomnummer och joner.">
+  
+  <title>Lektion 1: Atomens uppbyggnad | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 1</span>
+        <h1 class="lesson-title">Atomens uppbyggnad</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå atomens grundläggande struktur</li>
+          <li>Kunna räkna ut antal protoner, neutroner och elektroner</li>
+          <li>Förstå skillnaden mellan atomnummer och masstal</li>
+          <li>Kunna beräkna jonladdning</li>
+          <li>Förstå vad isotoper är</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Subatomära partiklar -->
+      <section class="section">
+        <h2 class="section-title">Subatomära partiklar</h2>
+        
+        <p>
+          Alla atomer består av tre typer av subatomära partiklar: <strong>protoner</strong>, 
+          <strong>neutroner</strong> och <strong>elektroner</strong>.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Partikel</th>
+                <th>Symbol</th>
+                <th>Laddning</th>
+                <th>Relativ massa</th>
+                <th>Plats i atomen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Proton</td>
+                <td>p⁺</td>
+                <td>+1</td>
+                <td>1</td>
+                <td>Kärnan</td>
+              </tr>
+              <tr>
+                <td>Neutron</td>
+                <td>n⁰</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Kärnan</td>
+              </tr>
+              <tr>
+                <td>Elektron</td>
+                <td>e⁻</td>
+                <td>−1</td>
+                <td>≈ 0</td>
+                <td>Elektronmolnet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Kom ihåg</div>
+          <p>
+            Protoner och neutroner finns i <strong>kärnan</strong> och har ungefär samma massa. 
+            Elektroner kretsar runt kärnan och har försumbar massa jämfört med kärnpartiklarna.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Atomnummer och masstal -->
+      <section class="section">
+        <h2 class="section-title">Atomnummer och masstal</h2>
+        
+        <p>
+          Varje grundämne identifieras av två viktiga tal: <strong>atomnummer</strong> och <strong>masstal</strong>.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula">Atomnummer (Z) = antal protoner</div>
+          <div class="formula-description">Atomnumret avgör vilket grundämne det är</div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">Masstal (A) = protoner + neutroner</div>
+          <div class="formula-description">Masstalet anger atomens totala kärnmassa</div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">Antal neutroner = Masstal − Atomnummer</div>
+          <div class="formula-description">Använd denna formel för att räkna ut antal neutroner</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Notation</div>
+          <p>
+            En atom skrivs ofta som: $\ce{^{A}_{Z}X}$ där X är grundämnesymbolen, A är masstalet och Z är atomnumret.
+            Till exempel: $\ce{^{12}_{6}C}$ (kol-12) har 6 protoner och 6 neutroner.
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 1</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur många protoner, neutroner och elektroner finns i en neutral atom av $\ce{^{56}_{26}Fe}$ (järn-56)?
+            </div>
+            <div class="example-solution">
+              <strong>Lösning:</strong><br>
+              • Atomnummer = 26, alltså <strong>26 protoner</strong><br>
+              • Masstal = 56, alltså neutroner = 56 − 26 = <strong>30 neutroner</strong><br>
+              • Neutral atom → elektroner = protoner = <strong>26 elektroner</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Joner -->
+      <section class="section">
+        <h2 class="section-title">Joner och jonladdning</h2>
+        
+        <p>
+          En <strong>jon</strong> är en atom som har förlorat eller tagit upp elektroner och 
+          därmed fått en elektrisk laddning.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Jontyp</th>
+                <th>Bildas genom</th>
+                <th>Laddning</th>
+                <th>Exempel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Katjon</strong> (positiv jon)</td>
+                <td>Förlorar elektroner</td>
+                <td>Positiv (+)</td>
+                <td>Na⁺, Ca²⁺, Fe³⁺</td>
+              </tr>
+              <tr>
+                <td><strong>Anjon</strong> (negativ jon)</td>
+                <td>Tar upp elektroner</td>
+                <td>Negativ (−)</td>
+                <td>Cl⁻, O²⁻, S²⁻</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">Elektroner i jon = Protoner − Laddning</div>
+          <div class="formula-description">Om laddning = +3, har jonen 3 färre elektroner än protoner</div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 2</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Hur många protoner, neutroner och elektroner finns i jonen $\ce{^{208}Pb^{4+}}$?
+            </div>
+            <div class="example-solution">
+              <strong>Lösning:</strong><br>
+              1. Hitta bly (Pb) i periodiska systemet → atomnummer = 82<br>
+              2. <strong>82 protoner</strong><br>
+              3. Neutroner = 208 − 82 = <strong>126 neutroner</strong><br>
+              4. Laddning = +4 → jonen har förlorat 4 elektroner<br>
+              5. Elektroner = 82 − 4 = <strong>78 elektroner</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Isotoper -->
+      <section class="section">
+        <h2 class="section-title">Isotoper</h2>
+        
+        <p>
+          <strong>Isotoper</strong> är atomer av samma grundämne som har samma antal protoner 
+          men olika antal neutroner. De har alltså samma atomnummer men olika masstal.
+        </p>
+
+        <div class="example">
+          <div class="example-header">Exempel: Kols isotoper</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Kol-12:</strong> 6 protoner + 6 neutroner = masstal 12<br>
+              <strong>Kol-13:</strong> 6 protoner + 7 neutroner = masstal 13<br>
+              <strong>Kol-14:</strong> 6 protoner + 8 neutroner = masstal 14<br><br>
+              Alla tre är kol (samma atomnummer) men har olika masstal.
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Viktigt</div>
+          <p>
+            Det masstal du ser i periodiska systemet är ett <strong>vägt medelvärde</strong> 
+            av alla naturligt förekommande isotoper. Det kan därför inte användas för att 
+            beräkna exakt antal neutroner – masstalet måste anges specifikt i uppgiften.
+          </p>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Hur många protoner har en atom med atomnummer 17?</li>
+            <li>En atom har 12 protoner och 12 neutroner. Vad är masstalet?</li>
+            <li>Hur många elektroner har en neutral natriumatom (Na)?</li>
+            <li>Vilken partikel avgör vilket grundämne en atom är?</li>
+            <li>En atom av $\ce{^{40}_{18}Ar}$ – hur många neutroner har den?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Jonen Ca²⁺ har 20 protoner. Hur många elektroner har den?</li>
+            <li>En jon har 26 protoner och 23 elektroner. Vad är jonladdningen?</li>
+            <li>Isotopen $\ce{^{238}_{92}U}$ (uran-238) – beräkna antal protoner, neutroner och elektroner.</li>
+            <li>Förklara skillnaden mellan $\ce{^{35}Cl}$ och $\ce{^{37}Cl}$.</li>
+            <li>En negativ jon har 10 elektroner och 8 protoner. Vilken jon är det och vad är dess laddning?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Jonen $\ce{^{56}Fe^{3+}}$ – bestäm antal protoner, neutroner och elektroner.</li>
+            <li>En atom har masstalet 80 och 45 neutroner. Vilket grundämne är det?</li>
+            <li>Förklara varför atommassan för klor i periodiska systemet är 35,45 u och inte ett heltal.</li>
+            <li>En jon X³⁻ har 36 elektroner. Vilket grundämne är X?</li>
+            <li>Isotopen $\ce{^{14}C}$ används för datering. Om en neutral $\ce{^{14}C}$-atom blir en $\ce{^{14}C^{4+}}$-jon, hur förändras antalet av varje partikeltyp?</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>17 protoner</strong></li>
+              <li><strong>24</strong> (12 + 12)</li>
+              <li><strong>11 elektroner</strong> (Na har atomnummer 11)</li>
+              <li><strong>Protoner</strong> (atomnumret bestäms av antalet protoner)</li>
+              <li><strong>22 neutroner</strong> (40 − 18)</li>
+              <li><strong>18 elektroner</strong> (20 − 2)</li>
+              <li><strong>+3</strong> (26 − 23 = 3 fler protoner)</li>
+              <li><strong>92 protoner, 146 neutroner, 92 elektroner</strong></li>
+              <li>De är <strong>isotoper</strong> av klor – samma antal protoner (17) men olika antal neutroner</li>
+              <li><strong>O²⁻</strong> (syre med laddning −2)</li>
+              <li><strong>26 protoner, 30 neutroner, 23 elektroner</strong></li>
+              <li><strong>Brom (Br)</strong> – atomnummer 35 (80 − 45)</li>
+              <li>Det är ett <strong>vägt medelvärde</strong> av isotoperna ³⁵Cl och ³⁷Cl baserat på deras naturliga förekomst</li>
+              <li><strong>Arsenik (As)</strong> – atomnummer 33 (36 − 3)</li>
+              <li>Protoner: 6 → 6 (samma), Neutroner: 8 → 8 (samma), Elektroner: 6 → 2 (förlorar 4)</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <span class="nav-btn disabled">← Föregående</span>
+        <a href="02-klassificering-av-materia.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

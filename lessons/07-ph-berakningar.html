@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 7: pH-beräkningar - Lär dig formeln pH = -log[H⁺] och hur man beräknar pH för starka syror och baser.">
+  
+  <title>Lektion 7: pH-beräkningar | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 7</span>
+        <h1 class="lesson-title">pH-beräkningar</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå pH-skalan och vad den mäter</li>
+          <li>Använda formeln pH = −log[H⁺]</li>
+          <li>Beräkna pH för starka syror</li>
+          <li>Beräkna pOH och pH för starka baser</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: pH-skalan -->
+      <section class="section">
+        <h2 class="section-title">pH-skalan</h2>
+        
+        <p>
+          <strong>pH</strong> är ett mått på hur sur eller basisk en lösning är. 
+          pH-skalan går normalt från 0 till 14.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>pH-värde</th>
+                <th>Typ</th>
+                <th>Exempel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: rgba(255, 123, 84, 0.2);">
+                <td>0-2</td>
+                <td>Stark syra</td>
+                <td>Saltsyra, magsaft</td>
+              </tr>
+              <tr style="background: rgba(255, 123, 84, 0.1);">
+                <td>3-6</td>
+                <td>Svag syra</td>
+                <td>Vinäger, apelsinjuice</td>
+              </tr>
+              <tr style="background: rgba(0, 191, 165, 0.1);">
+                <td>7</td>
+                <td><strong>Neutral</strong></td>
+                <td>Rent vatten</td>
+              </tr>
+              <tr style="background: rgba(123, 94, 189, 0.1);">
+                <td>8-11</td>
+                <td>Svag bas</td>
+                <td>Bakpulver, tvål</td>
+              </tr>
+              <tr style="background: rgba(123, 94, 189, 0.2);">
+                <td>12-14</td>
+                <td>Stark bas</td>
+                <td>Natriumhydroxid, ammoniak</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Logaritmisk skala</div>
+          <p>
+            pH-skalan är <strong>logaritmisk</strong>. Det betyder att varje steg på skalan 
+            motsvarar en 10-faldig förändring i vätejonkoncentration.<br><br>
+            pH 3 är 10 gånger surare än pH 4<br>
+            pH 3 är 100 gånger surare än pH 5
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Formler -->
+      <section class="section">
+        <h2 class="section-title">Viktiga formler</h2>
+        
+        <div class="formula-box">
+          <div class="formula">pH = −log[H⁺]</div>
+          <div class="formula-description">[H⁺] = vätejonkoncentration i mol/L</div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">[H⁺] = 10⁻ᵖᴴ</div>
+          <div class="formula-description">Omvänd formel för att beräkna [H⁺] från pH</div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">pH + pOH = 14</div>
+          <div class="formula-description">Gäller vid 25°C (rumtemperatur)</div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula">pOH = −log[OH⁻]</div>
+          <div class="formula-description">[OH⁻] = hydroxidjonkoncentration i mol/L</div>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Miniräknartips</div>
+          <p>
+            På de flesta miniräknare skriver du:<br>
+            • <code>-log(1E-3)</code> eller <code>-log(0.001)</code> för pH<br>
+            • <code>10^(-3)</code> för att få [H⁺] från pH = 3
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Starka syror -->
+      <section class="section">
+        <h2 class="section-title">pH för starka syror</h2>
+        
+        <p>
+          <strong>Starka syror</strong> dissocierar (sönderdelas) fullständigt i vatten. 
+          Detta betyder att [H⁺] = koncentrationen av syran.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Syra</th>
+                <th>Formel</th>
+                <th>Dissociation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Saltsyra</td>
+                <td>HCl</td>
+                <td>HCl → H⁺ + Cl⁻</td>
+              </tr>
+              <tr>
+                <td>Salpetersyra</td>
+                <td>HNO₃</td>
+                <td>HNO₃ → H⁺ + NO₃⁻</td>
+              </tr>
+              <tr>
+                <td>Svavelsyra</td>
+                <td>H₂SO₄</td>
+                <td>H₂SO₄ → 2H⁺ + SO₄²⁻</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 1: pH för stark syra</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Beräkna pH för en 0,01 M HCl-lösning.
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> HCl är en stark syra → dissocierar fullständigt<br>
+              • [H⁺] = 0,01 M = 10⁻² M<br><br>
+              
+              <strong>Steg 2:</strong> Använd formeln pH = −log[H⁺]<br>
+              • pH = −log(10⁻²) = −(−2) = <strong>2</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 2: Beräkna [H⁺]</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> En lösning har [H⁺] = 3,16 × 10⁻⁴ M. Beräkna pH.
+            </div>
+            <div class="example-solution">
+              <strong>Formel:</strong> pH = −log[H⁺]<br>
+              pH = −log(3,16 × 10⁻⁴)<br>
+              pH = −(−3,50) = <strong>3,50</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box warning">
+          <div class="info-box-title">⚠️ Obs! Svavelsyra</div>
+          <p>
+            H₂SO₄ ger 2 vätejoner per molekyl!<br>
+            Om c(H₂SO₄) = 0,1 M, då [H⁺] = 0,2 M
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Starka baser -->
+      <section class="section">
+        <h2 class="section-title">pH för starka baser</h2>
+        
+        <p>
+          För starka baser beräknar vi först <strong>pOH</strong> och sedan pH.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Bas</th>
+                <th>Formel</th>
+                <th>Dissociation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Natriumhydroxid</td>
+                <td>NaOH</td>
+                <td>NaOH → Na⁺ + OH⁻</td>
+              </tr>
+              <tr>
+                <td>Kaliumhydroxid</td>
+                <td>KOH</td>
+                <td>KOH → K⁺ + OH⁻</td>
+              </tr>
+              <tr>
+                <td>Kalciumhydroxid</td>
+                <td>Ca(OH)₂</td>
+                <td>Ca(OH)₂ → Ca²⁺ + 2OH⁻</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 3: pH för stark bas</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Beräkna pH för en 0,001 M NaOH-lösning.
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> NaOH är en stark bas → dissocierar fullständigt<br>
+              • [OH⁻] = 0,001 M = 10⁻³ M<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna pOH<br>
+              • pOH = −log(10⁻³) = 3<br><br>
+              
+              <strong>Steg 3:</strong> Beräkna pH<br>
+              • pH = 14 − pOH = 14 − 3 = <strong>11</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 4: Ca(OH)₂</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Fråga:</strong> Beräkna pH för en 0,01 M Ca(OH)₂-lösning.
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Ca(OH)₂ ger 2 OH⁻ per formelenhet<br>
+              • [OH⁻] = 2 × 0,01 = 0,02 M<br><br>
+              
+              <strong>Steg 2:</strong> Beräkna pOH<br>
+              • pOH = −log(0,02) = 1,70<br><br>
+              
+              <strong>Steg 3:</strong> Beräkna pH<br>
+              • pH = 14 − 1,70 = <strong>12,3</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Är en lösning med pH = 3 sur, neutral eller basisk?</li>
+            <li>Vad är pH för rent vatten vid 25°C?</li>
+            <li>Om [H⁺] = 10⁻⁵ M, vad är pH?</li>
+            <li>Vad är sambandet mellan pH och pOH vid 25°C?</li>
+            <li>Vilken lösning är surare: pH = 2 eller pH = 5?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Beräkna pH för en 0,1 M HCl-lösning.</li>
+            <li>Beräkna pH för en 0,001 M salpetersyra (HNO₃).</li>
+            <li>En lösning har pH = 4. Beräkna [H⁺].</li>
+            <li>Beräkna pH för en 0,1 M NaOH-lösning.</li>
+            <li>Beräkna pH om [H⁺] = 5 × 10⁻³ M.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Beräkna pH för en 0,05 M H₂SO₄-lösning.</li>
+            <li>En lösning har pOH = 2. Vad är pH?</li>
+            <li>Beräkna [OH⁻] för en lösning med pH = 11.</li>
+            <li>Vilken är [H⁺] i en lösning med pH = 2,5?</li>
+            <li>100 mL 0,2 M HCl späds till 1 L. Beräkna det nya pH-värdet.</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>Sur</strong> (pH < 7)</li>
+              <li><strong>7</strong></li>
+              <li><strong>5</strong></li>
+              <li><strong>pH + pOH = 14</strong></li>
+              <li><strong>pH = 2</strong> (lägre pH = surare)</li>
+              <li>pH = −log(0,1) = <strong>1</strong></li>
+              <li>pH = −log(0,001) = <strong>3</strong></li>
+              <li>[H⁺] = 10⁻⁴ = <strong>0,0001 M</strong></li>
+              <li>[OH⁻] = 0,1 M → pOH = 1 → pH = <strong>13</strong></li>
+              <li>pH = −log(5 × 10⁻³) = <strong>2,30</strong></li>
+              <li>[H⁺] = 2 × 0,05 = 0,1 M → pH = <strong>1</strong></li>
+              <li>pH = 14 − 2 = <strong>12</strong></li>
+              <li>pOH = 14 − 11 = 3 → [OH⁻] = 10⁻³ = <strong>0,001 M</strong></li>
+              <li>[H⁺] = 10⁻²'⁵ = <strong>3,16 × 10⁻³ M</strong></li>
+              <li>c₂ = (0,2 × 0,1)/1 = 0,02 M → pH = −log(0,02) = <strong>1,70</strong></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="06-elektrokemiska-spanningsserien.html" class="nav-btn">← Föregående</a>
+        <a href="08-aggregationstillstand-bindningstyper.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kemi 1 (KEBX13) - En komplett studieresurs för gymnasiekemi med interaktiva lektioner, övningar och facit. Fokusera på de viktigaste ämnena för att klara tentan."
+    />
+    <meta
+      name="keywords"
+      content="kemi, gymnasium, KEBX13, studieresurs, övningar, atomer, stökiometri, pH"
+    />
+
+    <title>⚗️ Kemi 1 - Studieresurs</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚗️</text></svg>"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- KaTeX for math notation -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <!-- Shared JavaScript -->
+    <script defer src="app.js"></script>
+  </head>
+  <body class="homepage">
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel">
+      <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">
+        ☀️
+      </button>
+      <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">
+        🎯
+      </button>
+      <button
+        class="settings-btn"
+        id="fontToggle"
+        title="Byt till dyslexivänligt teckensnitt"
+      >
+        Aa
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>⚗️ Kemi 1</h1>
+      <p class="subtitle">
+        Studieresurs för gymnasiekemi (KEBX13). Fokusera på de viktigaste ämnena
+        för att klara tentan med 40+ poäng!
+      </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="home-content">
+      <!-- Level 1: Foundation -->
+      <section class="course-section">
+        <h2 class="course-title">
+          <span class="level-indicator">Nivå 1</span>
+          Grunden – Säkra de första ~15 poängen
+        </h2>
+        <div class="lesson-grid">
+          <a href="lessons/01-atomens-uppbyggnad.html" class="lesson-card">
+            <span class="card-number">1</span>
+            <span class="card-title">Atomens uppbyggnad</span>
+          </a>
+          <a
+            href="lessons/02-klassificering-av-materia.html"
+            class="lesson-card"
+          >
+            <span class="card-number">2</span>
+            <span class="card-title">Klassificering av materia</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Level 2: Core Points -->
+      <section class="course-section">
+        <h2 class="course-title">
+          <span class="level-indicator">Nivå 2</span>
+          Kärnpoängen – Sikta mot ~35 poäng
+        </h2>
+        <div class="lesson-grid">
+          <a href="lessons/03-oxidationstal.html" class="lesson-card">
+            <span class="card-number">3</span>
+            <span class="card-title">Oxidationstal</span>
+          </a>
+          <a href="lessons/04-stokiometri.html" class="lesson-card">
+            <span class="card-number">4</span>
+            <span class="card-title">Stökiometri</span>
+          </a>
+          <a
+            href="lessons/05-koncentrationsberakningar.html"
+            class="lesson-card"
+          >
+            <span class="card-number">5</span>
+            <span class="card-title">Koncentrationsberäkningar</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Level 3: Secure Passing -->
+      <section class="course-section">
+        <h2 class="course-title">
+          <span class="level-indicator">Nivå 3</span>
+          Säkra godkänt – Nå över 40 poäng
+        </h2>
+        <div class="lesson-grid">
+          <a
+            href="lessons/06-elektrokemiska-spanningsserien.html"
+            class="lesson-card"
+          >
+            <span class="card-number">6</span>
+            <span class="card-title">Elektrokemiska spänningsserien</span>
+          </a>
+          <a href="lessons/07-ph-berakningar.html" class="lesson-card">
+            <span class="card-number">7</span>
+            <span class="card-title">pH-beräkningar</span>
+          </a>
+          <a
+            href="lessons/08-aggregationstillstand-bindningstyper.html"
+            class="lesson-card"
+          >
+            <span class="card-number">8</span>
+            <span class="card-title"
+              >Aggregationstillstånd & Bindningstyper</span
+            >
+          </a>
+        </div>
+      </section>
+
+      <!-- Study Tips -->
+      <section class="course-section">
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Studietips</div>
+          <p>
+            Denna resurs är baserad på <strong>Pareto-principen</strong>:
+            fokusera på de 20% av uppgiftstyperna som ger 80% av de "enkla"
+            poängen. Börja med Nivå 1 och arbeta dig uppåt. Varje lektion
+            innehåller övningar med facit för att testa dina kunskaper.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      style="
+        text-align: center;
+        padding: 2rem;
+        color: var(--md-on-surface-variant);
+        font-size: 0.875rem;
+      "
+    >
+      <p>📚 Baserad på Khan Academy-resurser och Kemi 1-tentor</p>
+    </footer>
+  </body>
+</html>

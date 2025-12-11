@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 8: Aggregationstillstånd & Bindningstyper - Lär dig om fast, flytande, gas samt jonbindning, kovalent bindning och metallbindning.">
+  
+  <title>Lektion 8: Aggregationstillstånd & Bindningstyper | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 8</span>
+        <h1 class="lesson-title">Aggregationstillstånd & Bindningstyper</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Beskriva de tre aggregationstillstånden och deras egenskaper</li>
+          <li>Förstå skillnaden mellan jonbindning, kovalent bindning och metallbindning</li>
+          <li>Kunna förutsäga bindningstyp baserat på grundämnena</li>
+          <li>Relatera bindningstyp till fysikaliska egenskaper</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Aggregationstillstånd -->
+      <section class="section">
+        <h2 class="section-title">Aggregationstillstånd</h2>
+        
+        <p>
+          Materia existerar i tre huvudsakliga <strong>aggregationstillstånd</strong> 
+          (eller faser): fast, flytande och gas. Tillståndet beror på temperaturen och trycket.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Egenskap</th>
+                <th>Fast (s)</th>
+                <th>Flytande (l)</th>
+                <th>Gas (g)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Form</strong></td>
+                <td>Bestämd</td>
+                <td>Anpassar sig till behållaren</td>
+                <td>Ingen bestämd</td>
+              </tr>
+              <tr>
+                <td><strong>Volym</strong></td>
+                <td>Bestämd</td>
+                <td>Bestämd</td>
+                <td>Expanderar</td>
+              </tr>
+              <tr>
+                <td><strong>Komprimerbar?</strong></td>
+                <td>Nej</td>
+                <td>Nästan inte</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td><strong>Partikelrörelse</strong></td>
+                <td>Vibrerar på plats</td>
+                <td>Glider förbi varandra</td>
+                <td>Rör sig fritt</td>
+              </tr>
+              <tr>
+                <td><strong>Densitet</strong></td>
+                <td>Hög</td>
+                <td>Hög</td>
+                <td>Låg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Fasövergångar</div>
+          <p>
+            <strong>Smältning:</strong> Fast → Flytande (tillför energi)<br>
+            <strong>Stelning:</strong> Flytande → Fast (avger energi)<br>
+            <strong>Avdunstning/Kokning:</strong> Flytande → Gas<br>
+            <strong>Kondensation:</strong> Gas → Flytande<br>
+            <strong>Sublimering:</strong> Fast → Gas (t.ex. torris)
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Bindningstyper - Översikt -->
+      <section class="section">
+        <h2 class="section-title">Bindningstyper - Översikt</h2>
+        
+        <p>
+          Atomer binds samman genom tre huvudtyper av kemiska bindningar. 
+          Bindningstypen bestäms av vilka typer av atomer som binder.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Bindningstyp</th>
+                <th>Bildas mellan</th>
+                <th>Mekanism</th>
+                <th>Exempel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Jonbindning</strong></td>
+                <td>Metall + Ickemetall</td>
+                <td>Elektroner överförs</td>
+                <td>NaCl, MgO</td>
+              </tr>
+              <tr>
+                <td><strong>Kovalent bindning</strong></td>
+                <td>Ickemetall + Ickemetall</td>
+                <td>Elektroner delas</td>
+                <td>H₂O, CO₂, O₂</td>
+              </tr>
+              <tr>
+                <td><strong>Metallbindning</strong></td>
+                <td>Metall + Metall</td>
+                <td>"Elektronhav"</td>
+                <td>Fe, Cu, Au</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Snabbregel</div>
+          <p>
+            1. Använd periodiska systemet för att identifiera metaller och ickemetaller<br>
+            2. Metaller: vänster sida (grupp 1-12 + Al, Sn, Pb...)<br>
+            3. Ickemetaller: höger sida (C, N, O, S, hålogener...)
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Jonbindning -->
+      <section class="section">
+        <h2 class="section-title">Jonbindning</h2>
+        
+        <p>
+          <strong>Jonbindning</strong> bildas när en metall överför elektroner till en ickemetall. 
+          Metallen blir en positiv jon (katjon) och ickemetallen blir en negativ jon (anjon).
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Egenskap</th>
+                <th>Jonföreningar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Struktur</td>
+                <td>Kristallgitter med joner</td>
+              </tr>
+              <tr>
+                <td>Smältpunkt</td>
+                <td>Hög (stark attraktion)</td>
+              </tr>
+              <tr>
+                <td>Leder ström?</td>
+                <td>Nej (fast), Ja (smält/löst)</td>
+              </tr>
+              <tr>
+                <td>Lösligt i vatten?</td>
+                <td>Ofta ja</td>
+              </tr>
+              <tr>
+                <td>Sprödhet</td>
+                <td>Spröda (krossas lätt)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel: Natriumklorid (NaCl)</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Bildning:</strong><br>
+              • Na (metall) avger 1 elektron → Na⁺<br>
+              • Cl (ickemetall) tar upp 1 elektron → Cl⁻<br>
+              • Attraktion mellan Na⁺ och Cl⁻ bildar jonföringen NaCl<br><br>
+              
+              <strong>Egenskaper:</strong> Vit kristall, smälter vid 801°C, löser sig i vatten
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Kovalent bindning -->
+      <section class="section">
+        <h2 class="section-title">Kovalent bindning</h2>
+        
+        <p>
+          <strong>Kovalent bindning</strong> bildas när två ickemetaller delar elektroner. 
+          Elektronerna tillhör båda atomerna samtidigt.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Egenskap</th>
+                <th>Kovalenta föreningar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Struktur</td>
+                <td>Diskreta molekyler</td>
+              </tr>
+              <tr>
+                <td>Smältpunkt</td>
+                <td>Ofta låg</td>
+              </tr>
+              <tr>
+                <td>Leder ström?</td>
+                <td>Nej (inga fria laddningar)</td>
+              </tr>
+              <tr>
+                <td>Lösligt i vatten?</td>
+                <td>Varierar (polära löser sig)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Typer av kovalenta bindningar</div>
+          <p>
+            <strong>Enkelbindning:</strong> 1 elektronpar delas (H-H)<br>
+            <strong>Dubbelbindning:</strong> 2 elektronpar delas (O=O)<br>
+            <strong>Trippelbindning:</strong> 3 elektronpar delas (N≡N)
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel: Vatten (H₂O)</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Bildning:</strong><br>
+              • Syre (O) delar elektronpar med två väte (H)<br>
+              • Varje H-O är en kovalent enkelbindning<br><br>
+              
+              <strong>Egenskaper:</strong> Smälter vid 0°C, kokar vid 100°C, polär molekyl
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Metallbindning -->
+      <section class="section">
+        <h2 class="section-title">Metallbindning</h2>
+        
+        <p>
+          <strong>Metallbindning</strong> bildas mellan metallatomer. Valenselektronerna 
+          är delokaliserade och bildar ett "elektronhav" som rör sig fritt mellan atomerna.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Egenskap</th>
+                <th>Metaller</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Struktur</td>
+                <td>Metalljoner i elektronhav</td>
+              </tr>
+              <tr>
+                <td>Smältpunkt</td>
+                <td>Varierar (ofta hög)</td>
+              </tr>
+              <tr>
+                <td>Leder ström?</td>
+                <td>Ja (fria elektroner)</td>
+              </tr>
+              <tr>
+                <td>Leder värme?</td>
+                <td>Ja (elektronerna rör sig)</td>
+              </tr>
+              <tr>
+                <td>Formbarhet</td>
+                <td>Smidiga och sega</td>
+              </tr>
+              <tr>
+                <td>Glans</td>
+                <td>Metallglans</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel: Koppar (Cu)</div>
+          <div class="example-content">
+            <div class="example-solution">
+              <strong>Struktur:</strong><br>
+              • Cu⁺-joner arrangerade i ett gitter<br>
+              • Valenselektroner rör sig fritt mellan jonerna<br><br>
+              
+              <strong>Egenskaper:</strong> Leder ström (elkablar), formbar (kan dras till trådar), metallglans
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 Varför metaller leder ström</div>
+          <p>
+            De fria elektronerna i elektronhavet kan röra sig genom metallen 
+            när en spänning appliceras. Detta gör metaller till utmärkta elektriska ledare.
+          </p>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Vilka är de tre aggregationstillstånden?</li>
+            <li>Vad kallas övergången från fast till flytande?</li>
+            <li>Mellan vilka typer av atomer bildas jonbindning?</li>
+            <li>Ger kovalenta föreningar elektrisk ledningsförmåga?</li>
+            <li>Vad är "elektronhavet" i metaller?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Klassificera bindningstypen i: a) MgO b) H₂ c) Fe</li>
+            <li>Förklara varför metaller leder ström men jonföreningar i fast form inte gör det.</li>
+            <li>Varför har natriumklorid hög smältpunkt men vatten låg?</li>
+            <li>Klassificera: a) CO₂ b) CaCl₂ c) Guld (Au)</li>
+            <li>Vilken fasövergång sker när is smälter till vatten?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Förklara varför diamant (C) har mycket hög smältpunkt trots att kol är en ickemetall.</li>
+            <li>En förening har hög smältpunkt och leder ström när den smälts. Vilken bindningstyp är det troligen?</li>
+            <li>Varför är metaller formbara men jonkristaller spröda?</li>
+            <li>Klassificera och motivera bindningstyp för: ammoniakgas (NH₃), aluminiumoxid (Al₂O₃), mässing (Cu + Zn).</li>
+            <li>Förklara skillnaden mellan sublimering och avdunstning.</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>Fast, flytande och gas</strong></li>
+              <li><strong>Smältning</strong></li>
+              <li><strong>Metall och ickemetall</strong></li>
+              <li><strong>Nej</strong> (inga fria laddningar)</li>
+              <li>Delokaliserade <strong>valenselektroner</strong> som rör sig fritt mellan metalljoner</li>
+              <li>a) <strong>Jonbindning</strong> b) <strong>Kovalent</strong> c) <strong>Metallbindning</strong></li>
+              <li>Metaller har <strong>fria elektroner</strong> som kan röra sig. Jonkristaller har jonerna fast bundna i gittret och kan inte röra sig.</li>
+              <li>NaCl har <strong>starka jonbindningar</strong> i ett gitter. Vatten har svaga intermolekylära krafter mellan molekylerna.</li>
+              <li>a) <strong>Kovalent</strong> b) <strong>Jonbindning</strong> c) <strong>Metallbindning</strong></li>
+              <li><strong>Smältning</strong> (fast → flytande)</li>
+              <li>Diamant har <strong>kovalent nätverksstruktur</strong> där varje kolatom är bunden till fyra andra i ett tredimensionellt nätverk.</li>
+              <li><strong>Jonbindning</strong> – jonföreningar leder ström när jonerna kan röra sig (smält eller löst)</li>
+              <li>I metaller kan <strong>atomlagren glida</strong> förbi varandra utan att bindningen bryts. I jonkristaller ger förskjutning att lika laddningar möts och stöter bort varandra → kristallen splittras.</li>
+              <li>NH₃: <strong>Kovalent</strong> (ickemetall + ickemetall)<br>Al₂O₃: <strong>Jonbindning</strong> (metall + ickemetall)<br>Mässing: <strong>Metallbindning</strong> (legering av metaller)</li>
+              <li><strong>Sublimering:</strong> direkt från fast till gas. <strong>Avdunstning:</strong> flytande till gas vid ytan (under kokpunkten)</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="07-ph-berakningar.html" class="nav-btn">← Föregående</a>
+        <span class="nav-btn disabled">Nästa →</span>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

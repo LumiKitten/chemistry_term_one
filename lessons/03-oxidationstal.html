@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lektion 3: Oxidationstal - Lär dig reglerna för att tilldela oxidationstal och hur man beräknar dem i molekyler och joner.">
+  
+  <title>Lektion 3: Oxidationstal | Kemi 1</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn" id="themeToggle" title="Byt till ljust läge">☀️</button>
+    <button class="settings-btn" id="focusToggle" title="Aktivera fokusläge">🎯</button>
+    <button class="settings-btn" id="fontToggle" title="Byt till dyslexivänligt teckensnitt">Aa</button>
+  </div>
+
+  <a href="../index.html" class="back-link">← Tillbaka till översikt</a>
+
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 3</span>
+        <h1 class="lesson-title">Oxidationstal</h1>
+      </header>
+
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå vad oxidationstal är och varför de används</li>
+          <li>Kunna reglerna för att tilldela oxidationstal</li>
+          <li>Beräkna oxidationstal för atomer i molekyler och joner</li>
+          <li>Identifiera oxidation och reduktion</li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Introduktion -->
+      <section class="section">
+        <h2 class="section-title">Vad är oxidationstal?</h2>
+        
+        <p>
+          <strong>Oxidationstal</strong> (OT) är ett sätt att beskriva hur elektroner 
+          "fördelas" i en kemisk förening. Det är ett bokföringssystem som hjälper oss 
+          att spåra elektronöverföring i redoxreaktioner.
+        </p>
+
+        <div class="info-box">
+          <div class="info-box-title">📝 Formell definition</div>
+          <p>
+            Oxidationstalet anger den hypotetiska laddning en atom skulle ha om alla 
+            bindningar vore helt joniska (alla elektroner tillhör den mest elektronegativa atomen).
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Grundregler -->
+      <section class="section">
+        <h2 class="section-title">Regler för oxidationstal</h2>
+        
+        <p>
+          Följande regler används för att bestämma oxidationstal. Memorera dessa – 
+          de är nyckeln till att lösa uppgifterna!
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Regel</th>
+                <th>OT</th>
+                <th>Exempel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Fria grundämnen</td>
+                <td><strong>0</strong></td>
+                <td>Fe, O₂, N₂, S₈</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Enkla joner</td>
+                <td><strong>= laddningen</strong></td>
+                <td>Na⁺ → +I, Cl⁻ → −I</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Väte (H)</td>
+                <td><strong>+I</strong></td>
+                <td>HCl, H₂O, H₂SO₄</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Syre (O)</td>
+                <td><strong>−II</strong></td>
+                <td>H₂O, CO₂, SO₄²⁻</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Summan i neutral molekyl</td>
+                <td><strong>= 0</strong></td>
+                <td>H₂O: 2(+I) + (−II) = 0</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Summan i jon</td>
+                <td><strong>= jonens laddning</strong></td>
+                <td>SO₄²⁻: summa = −2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box warning">
+          <div class="info-box-title">⚠️ Undantag att känna till</div>
+          <p>
+            <strong>Väte = −I</strong> i metallhydrider (t.ex. NaH, CaH₂)<br>
+            <strong>Syre = −I</strong> i peroxider (t.ex. H₂O₂, Na₂O₂)<br>
+            <strong>Syre = +II</strong> i OF₂ (fluorid är mer elektronegativt)
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Beräkningsmetod -->
+      <section class="section">
+        <h2 class="section-title">Beräkningsmetod</h2>
+        
+        <div class="formula-box">
+          <div class="formula">Summan av alla OT = molekylens totala laddning</div>
+          <div class="formula-description">0 för neutrala molekyler, jonladdningen för joner</div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 1: Bestäm OT för svavel i H₂SO₄</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Molekyl:</strong> H₂SO₄ (svavelsyra) – neutral molekyl
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Tilldela kända OT<br>
+              • H = +I (2 st) → bidrag: 2 × (+I) = +II<br>
+              • O = −II (4 st) → bidrag: 4 × (−II) = −VIII<br><br>
+              
+              <strong>Steg 2:</strong> Ställ upp ekvation (summa = 0)<br>
+              • 2(+I) + x + 4(−II) = 0<br>
+              • +2 + x − 8 = 0<br>
+              • x = +6<br><br>
+              
+              <strong>Svar:</strong> Svavel har oxidationstal <strong>+VI</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 2: Bestäm OT för kväve i NO₃⁻</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Jon:</strong> NO₃⁻ (nitratjon) – laddning = −1
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Tilldela kända OT<br>
+              • O = −II (3 st) → bidrag: 3 × (−II) = −VI<br><br>
+              
+              <strong>Steg 2:</strong> Ställ upp ekvation (summa = −1)<br>
+              • x + 3(−II) = −1<br>
+              • x − 6 = −1<br>
+              • x = +5<br><br>
+              
+              <strong>Svar:</strong> Kväve har oxidationstal <strong>+V</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-header">Exempel 3: Bestäm OT för kväve i NH₃</div>
+          <div class="example-content">
+            <div class="example-problem">
+              <strong>Molekyl:</strong> NH₃ (ammoniak) – neutral molekyl
+            </div>
+            <div class="example-solution">
+              <strong>Steg 1:</strong> Tilldela kända OT<br>
+              • H = +I (3 st) → bidrag: 3 × (+I) = +III<br><br>
+              
+              <strong>Steg 2:</strong> Ställ upp ekvation (summa = 0)<br>
+              • x + 3(+I) = 0<br>
+              • x + 3 = 0<br>
+              • x = −3<br><br>
+              
+              <strong>Svar:</strong> Kväve har oxidationstal <strong>−III</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Oxidation och reduktion -->
+      <section class="section">
+        <h2 class="section-title">Oxidation och reduktion</h2>
+        
+        <p>
+          Oxidationstal används för att identifiera vad som oxideras och reduceras i en reaktion.
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Process</th>
+                <th>OT förändring</th>
+                <th>Elektroner</th>
+                <th>Minnesregel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Oxidation</strong></td>
+                <td>OT ökar</td>
+                <td>Avger elektroner</td>
+                <td>"OIL" – Oxidation Is Loss</td>
+              </tr>
+              <tr>
+                <td><strong>Reduktion</strong></td>
+                <td>OT minskar</td>
+                <td>Tar upp elektroner</td>
+                <td>"RIG" – Reduction Is Gain</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💡 OIL RIG</div>
+          <p>
+            <strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss (av elektroner)<br>
+            <strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain (av elektroner)
+          </p>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E – Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Vad är oxidationstalet för syre i H₂O?</li>
+            <li>Vad är oxidationstalet för järn i Fe?</li>
+            <li>Vad är oxidationstalet för natrium i Na⁺?</li>
+            <li>Vad är oxidationstalet för väte i HCl?</li>
+            <li>Vad är oxidationstalet för klor i Cl⁻?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C – Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>Bestäm oxidationstalet för svavel i SO₂.</li>
+            <li>Bestäm oxidationstalet för kol i CO₂.</li>
+            <li>Bestäm oxidationstalet för mangan i KMnO₄.</li>
+            <li>Bestäm oxidationstalet för krom i Cr₂O₇²⁻.</li>
+            <li>Bestäm oxidationstalet för kväve i: a) N₂ b) NO₂ c) NH₄⁺</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A – Avancerat</span>
+          <ol class="exercise-list" start="11">
+            <li>Bestäm oxidationstalet för fosfor i H₃PO₄.</li>
+            <li>I reaktionen 2Fe + 3Cl₂ → 2FeCl₃, vad oxideras och vad reduceras?</li>
+            <li>Bestäm oxidationstalet för syre i H₂O₂ (väteperoxid).</li>
+            <li>I reaktionen Zn + Cu²⁺ → Zn²⁺ + Cu, identifiera oxidation och reduktion.</li>
+            <li>Bestäm oxidationstalet för svavel i: a) H₂S b) SO₃ c) HSO₄⁻</li>
+          </ol>
+        </div>
+
+        <div class="facit">
+          <button class="facit-toggle">🔑 Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li><strong>−II</strong></li>
+              <li><strong>0</strong> (fritt grundämne)</li>
+              <li><strong>+I</strong> (jonens laddning)</li>
+              <li><strong>+I</strong></li>
+              <li><strong>−I</strong></li>
+              <li><strong>+IV</strong> (x + 2(−2) = 0 → x = +4)</li>
+              <li><strong>+IV</strong> (x + 2(−2) = 0 → x = +4)</li>
+              <li><strong>+VII</strong> (+1 + x + 4(−2) = 0 → x = +7)</li>
+              <li><strong>+VI</strong> (2x + 7(−2) = −2 → x = +6)</li>
+              <li>a) <strong>0</strong> b) <strong>+IV</strong> c) <strong>−III</strong></li>
+              <li><strong>+V</strong> (3(+1) + x + 4(−2) = 0 → x = +5)</li>
+              <li>Fe oxideras (0 → +III), Cl reduceras (0 → −I)</li>
+              <li><strong>−I</strong> (peroxid-undantaget)</li>
+              <li>Zn oxideras (0 → +II), Cu²⁺ reduceras (+II → 0)</li>
+              <li>a) <strong>−II</strong> b) <strong>+VI</strong> c) <strong>+VI</strong></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <nav class="lesson-nav">
+        <a href="02-klassificering-av-materia.html" class="nav-btn">← Föregående</a>
+        <a href="04-stokiometri.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>
